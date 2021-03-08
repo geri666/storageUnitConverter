@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="637.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pkg1304javafxml.FXMLDocumentController">
+   <children>
+      <MenuBar layoutX="10.0" layoutY="14.0" prefWidth="550.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem fx:id="menuReset" mnemonicParsing="false" onAction="#fileReset" text="Reset" />
+              <MenuItem fx:id="menuExit" mnemonicParsing="false" onAction="#fileExit" text="Exit" />
+            </items>
+          </Menu>
+          <Menu fx:id="menubarHelp" mnemonicParsing="false" onAction="#helpClicked" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TextField fx:id="textFieldToConvert" alignment="CENTER_RIGHT" layoutX="20.0" layoutY="72.0" prefHeight="75.0" prefWidth="416.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="114.0">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </TextField>
+      <Label fx:id="lbl1" layoutX="20.0" layoutY="42.0" text="Amount to convert" />
+      <Label fx:id="lbl2" layoutX="20.0" layoutY="154.0" text="Convert" />
+      <TextField fx:id="textFieldResult" alignment="CENTER_RIGHT" editable="false" layoutX="18.0" layoutY="536.0" prefHeight="75.0" prefWidth="416.0">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </TextField>
+      <Label fx:id="lbl3" layoutX="20.0" layoutY="506.0" text="Result" />
+      <Button fx:id="btnConvert" layoutX="20.0" layoutY="447.0" mnemonicParsing="false" onAction="#handleButtonConvert" prefHeight="46.0" prefWidth="510.0" text="Convert">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnBits" layoutX="20.0" layoutY="183.0" mnemonicParsing="false" onAction="#handleButtonBits" prefHeight="40.0" prefWidth="107.0" text="Bits" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+      <Button fx:id="btnBytes" layoutX="20.0" layoutY="223.0" mnemonicParsing="false" onAction="#handleButtonBytes" prefHeight="40.0" prefWidth="107.0" text="Bytes" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+      <Button fx:id="btdKilobytes" layoutX="20.0" layoutY="263.0" mnemonicParsing="false" onAction="#handleButtonKilobytes" prefHeight="40.0" prefWidth="107.0" text="Kilobytes" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+      <Button fx:id="btnMegabytes" layoutX="20.0" layoutY="303.0" mnemonicParsing="false" onAction="#handleButtonMegabytes" prefHeight="40.0" prefWidth="107.0" text="Megabytes" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+      <Button fx:id="btnGigabytes" layoutX="20.0" layoutY="343.0" mnemonicParsing="false" onAction="#handleButtonGigabytes" prefHeight="40.0" prefWidth="107.0" text="Gigabytes" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+      <Button fx:id="btnTerabytes" layoutX="20.0" layoutY="385.0" mnemonicParsing="false" onAction="#handleButtonTerabytes" prefHeight="40.0" prefWidth="107.0" text="Terabytes" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+      <Label fx:id="lblUnit" layoutX="135.0" layoutY="154.0" prefHeight="21.0" prefWidth="133.0" />
+      <Label layoutX="102.0" layoutY="154.0" prefHeight="21.0" prefWidth="33.0" text="into:" />
+      <Label fx:id="lblConvertUnit" layoutX="75.0" layoutY="154.0" prefHeight="21.0" prefWidth="23.0" />
+      <ComboBox fx:id="comboBox" layoutX="451.0" layoutY="72.0" onAction="#writeComboBoxValueOnLabel" prefHeight="75.0" prefWidth="79.0" AnchorPane.rightAnchor="20.0" />
+      <Label fx:id="lblResult" layoutX="445.0" layoutY="536.0" prefHeight="75.0" prefWidth="79.0">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
